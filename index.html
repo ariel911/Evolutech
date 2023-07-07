@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <h1 id="header"></h1>
+
+  <script>
+
+    const suma = (a, b) => a + b;
+
+    const resta = (a, b) => a - b;
+
+    const multiplicacion = (a, b) => a * b;
+
+    const division = (a, b) => (b !== 0) ? a / b : "Error División por cero";
+
+    const calculadora = (num1, num2, operador) => {
+      const operaciones = { '+': suma, '-': resta, '*': multiplicacion, '/': division };
+      return operaciones[operador] ? operaciones[operador](num1, num2) : "Operador no válido";
+    };
+
+    let resultado = calculadora(5, 3, '+');
+    console.log(resultado);  
+  </script>
+</body>
+
+</html>
